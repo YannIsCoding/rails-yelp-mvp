@@ -3,7 +3,9 @@
 <ul>
       <% @restaurants.each do |resto| %>
     <li>
-      <%= resto[:name] %>
+      <%= link_to resto[:name], restaurant_path(resto) %>
     </li>
       <% end %>
 </ul>
+
+<%= link_to 'Add a resto', new_restaurant_path  %>
